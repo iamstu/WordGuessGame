@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>hangman</title>
-
-
+    <title>Character Guess</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to the Working Title word guess game!</h1>
+    <div class="content">
+    <header>Game Guesser</header>
+    <div class="game">
+    <h1>Welcome to the Video Gameword guess game!</h1>
     <br><br>
 
-    <h2>You have 7 tries to guess letter having to do with subject.</h2>
+    <h2>You have 7 tries to guess letters of a Video Game title.</h2>
+    <br>
+    <p class="sidenote">If there is a game you don't know, look it up give it a try!</p>
+    <br><br><br>
     <div>
         <p id="word">Word:</p>
+        <br><br><br>
         <p id="wrong">Wrong Letters:</p>
+        <br>
         <p id="tries">Tries Left:</p>
+        <br>
         <p id="wins">Wins:</p>
+        <br>
         <p id="losses">Losses:</p>
-        <p></p>
+        <br><br><br><br>
+        <p id="guessed-words">Words Guessed</p>
+    </div>
+    </div>
     </div>
     <script src="assets/javascript/game.js"></script>
 </body>

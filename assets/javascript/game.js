@@ -1,5 +1,5 @@
     console.log("its working");
-    var wordList = ["FIRST", "SECOND", "THIRD", "FOURTH", "FIFTH"];
+    var wordList = ["CONTRA", "DOOM", "XCOM", "METROID", "MARIO", "PORTAL", "HALFLIFE", "JSRF", "BRAID", "FALLOUT", "FABLE", "EARTHBOUND"];
     var computerChoice= [];
     var computerLetter;
     var choice;
@@ -74,7 +74,7 @@ function getWord(){
            wrong = [];
            wins++;
            tries = 7;
-            document.querySelector("#wins").innerHTML = "wins: " + wins;
+            document.querySelector("#wins").innerHTML = "Wins: " + wins;
             document.querySelector("#tries").innerHTML = "Tries Left: " + tries;
             document.querySelector("#wrong").innerHTML = "Wrong Letters: " + wrong;
         }
