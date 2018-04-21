@@ -51,3 +51,7 @@ h1{
 #losses{
     color: #ff0000;
 }
+
+#guessed-words{
+    max-width: 560px;
+}

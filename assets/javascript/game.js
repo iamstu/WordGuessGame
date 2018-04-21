@@ -9,7 +9,9 @@
     var wins = 0;
     var losses = 0;
     var answer;
-    
+    var guessedWords= [];
+    var prevWord;
+    var remaining = wordList.length - guessedWords.length;
     //to make a new word to guess
 function getWord(){
         
@@ -24,9 +26,10 @@ function getWord(){
             
         }
         document.querySelector("#losses").innerHTML = "Losses: " + losses;
+        document.querySelector("#wins").innerHTML = "Wins: " + wins;
         document.querySelector("#word").innerHTML = "Word: " + progress;
         document.querySelector("#tries").innerHTML = "Tries Left: " + tries;
-        console.log(tries);
+        document.querySelector("#remaining").innerHTML = "Words Left to Guess: " + remaining;
         }
         console.log(computerChoice);
     } 
@@ -70,6 +73,25 @@ function getWord(){
         
 
         if (answer === choice){
+            for (var y = 0; y <guessedWords.length; y++) {
+                if (" " + answer === guessedWords[y]){
+                    prevWord = " " + answer;
+                }
+            }
+            if (prevWord === (" " + answer)) {
+                getWord();
+           wrong = [];
+           wins++;
+           tries = 7;
+            document.querySelector("#wins").innerHTML = "Wins: " + wins;
+            document.querySelector("#tries").innerHTML = "Tries Left: " + tries;
+            document.querySelector("#wrong").innerHTML = "Wrong Letters: " + wrong;
+            document.querySelector("#guessed-words").innerHTML = "Words Guessed: " + guessedWords;
+            }
+            else {
+            guessedWords.push(" " + answer);
+            remaining = wordList.length - guessedWords.length;
+            document.querySelector("#remaining").innerHTML = "Words Left to Guess: " + remaining;
            getWord();
            wrong = [];
            wins++;
@@ -77,6 +99,8 @@ function getWord(){
             document.querySelector("#wins").innerHTML = "Wins: " + wins;
             document.querySelector("#tries").innerHTML = "Tries Left: " + tries;
             document.querySelector("#wrong").innerHTML = "Wrong Letters: " + wrong;
+            document.querySelector("#guessed-words").innerHTML = "Words Guessed: " + guessedWords;
+            }
         }
         else {
             answer = "";
