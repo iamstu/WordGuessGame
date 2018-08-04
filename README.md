@@ -8,3 +8,5 @@ Begin by pressing any letter key. Correct guesses will replace the spaces repres
 You have seven tries per word and the words will randomly be chosen upon either a correct guess or a loss of all tries.
 The number of words remaining will update upon a correct guess of a previously un-guessed word.
 All data fields will update upon relevant events such as loss, win, or quality of guess.
+
+Technologies used: JavaScript, HTML, CSS
